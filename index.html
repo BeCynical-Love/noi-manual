@@ -7,36 +7,50 @@
     <title>Document</title>
 </head>
 <body>
-    <style>
-        ul .hia {
-            list-style-type:none;
-            margin:0;
-            padding:0;
-            overflow:hidden;
-            border:1px solid #e7e7e7;
-            background:#f3f3f3;
+    <style type="text/css">
+        /*所有标签的margin，padding清零*/
+        *{
+            padding:0px;margin:0px;
         }
-        li .he {
-            float:left;
+        /*导航栏*/
+        .nav{
+            width:780px;
+            height:30px;
+            list-style-type:none;            /*去掉无序列表前面的圆圈*/
+            background-color:#A8FFA8;    
+            margin:20px auto;                /*水平居中，离顶部20px*/
         }
-        li .he a {
-            display:block;
-            color:#666;
-            text-align:center;
-            padding:14px 16px;
-            text-decoration:none;
+        /*导航栏里的li*/
+        .nav>li{
+            float:left;                        /*里面的li全部左浮动*/
+            width:129px;                
+            text-align:center;                /*让li里的文字居中*/
+            line-height:30px;                /*行高变成30px填满li，就能竖直居中*/
+            border-right:1px solid white;    /*把li的右边距用白色分割*/
         }
-        li .he a:hover:not(.active) {
-            background:#ddd;
+        /*a标签*/
+        .nav>li>a{                        
+            color:#060;
+            text-decoration:none;            /*去掉下划线*/
         }
-        li .he a .active {
+        /*鼠标经过a标签时*/
+        .nav>li>a:hover{
             color:white;
-            background:#4caf50;
+            display:block;                    /*变成块元素，自动撑大（由于块状元素width：100%
+                            和自己设置的line-height:30px），将充满整个li*/
+            background-color:pink;
         }
     </style>
-    <ul class="hia">
-        <li class="he"><a href="#">MainPage</a></li>
-    </ul>
+    <div class="wrap">
+        <ul class="nav">
+            <li><a href="#">公司首页</a></li>
+            <li><a href="#">产品介绍</a></li>
+            <li><a href="#">用户反馈</a></li>
+            <li><a href="#">给我留言</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">公司简介</a></li>
+        </ul>
+    </div> 
 
     这是一个待开发的测试页面
     最新消息将在此更新:
