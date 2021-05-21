@@ -1,61 +1,87 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <style type="text/css">
-        /*所有标签的margin，padding清零*/
-        *{
-            padding:0px;margin:0px;
-        }
-        /*导航栏*/
-        .nav{
-            width:780px;
-            height:30px;
-            list-style-type:none;            /*去掉无序列表前面的圆圈*/
-            background-color:#A8FFA8;    
-            margin:20px auto;                /*水平居中，离顶部20px*/
-        }
-        /*导航栏里的li*/
-        .nav>li{
-            float:left;                        /*里面的li全部左浮动*/
-            width:129px;                
-            text-align:center;                /*让li里的文字居中*/
-            line-height:30px;                /*行高变成30px填满li，就能竖直居中*/
-            border-right:1px solid white;    /*把li的右边距用白色分割*/
-        }
-        /*a标签*/
-        .nav>li>a{                        
-            color:#060;
-            text-decoration:none;            /*去掉下划线*/
-        }
-        /*鼠标经过a标签时*/
-        .nav>li>a:hover{
-            color:white;
-            display:block;                    /*变成块元素，自动撑大（由于块状元素width：100%
-                            和自己设置的line-height:30px），将充满整个li*/
-            background-color:pink;
-        }
-    </style>
-    <div class="wrap">
-        <ul class="nav">
-            <li><a href="#">公司首页</a></li>
-            <li><a href="#">产品介绍</a></li>
-            <li><a href="#">用户反馈</a></li>
-            <li><a href="#">给我留言</a></li>
-            <li><a href="#">联系我们</a></li>
-            <li><a href="#">公司简介</a></li>
-        </ul>
-    </div> 
+<html>
+   <head>
+       <style type="text/css">
+        .top{
+    /* 设置宽度高度背景颜色 */
+    height: auto; /*高度改为自动高度*/
+    width:101%;
+    margin-left: -10;
+    position: fixed; /*固定在顶部*/
+    top: 0;/*离顶部的距离为0*/
+    margin-bottom: 5px;
+}
+.top ul{
+    /* 清除ul标签的默认样式 */
+    width: auto;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-right: 5%;
+    margin-top: 0;
+    padding: 0;
 
-    这是一个待开发的测试页面
-    最新消息将在此更新:
-    <h1>NewMessage</h1>
-    2021.5.21
-    网站出现
-</body>
+}
+.top li {
+    float:right; /* 使li内容横向浮动，即横向排列  */
+    position: relative;
+    overflow: hidden;
+    width:120px;
+    height:60px;
+    margin-right:0%;
+}
+
+.top li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    text-align: center;
+    padding: 3px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    
+}
+.top ul li ul{
+    /* 设置二级菜单 */
+    margin-left: -0.2px;
+    background:rgb(189, 181, 181);
+    position: relative;
+    display: none; /* 默认隐藏二级菜单的内容 */
+
+}
+.top ul li ul li{
+    /* 二级菜单li内容的显示 */
+    
+    float:none;
+    text-align: center;
+}
+.top ul li:hover ul{
+    /* 鼠标选中二级菜单内容时 */
+    display: block;
+}
+.top ul li a.active {
+    background: #4caf50;
+    color:white;
+}
+body{
+    background:#ffffff;
+}
+
+       </style>
+    </head>
+    <body>
+        <div class="top">
+                <center>
+                    <ul>
+                        <li style="background:#4caf50;width:180px;font-family:等线 Light;color:white;font-size:25px;height:80px;"><br>Everyone OJ</li>
+                    </ul>
+                </center>
+        </div>
+        <br><br><br><br><br><br>
+        This is just a html website<br><br>
+        The writer will study lots of languages to buid this OJ<br><br>
+        Wish to see the best it soon<br><br>
+        ——BeCynical
+
+        This WebSite is Start on 21th,May,2021
+    </body>
 </html>
